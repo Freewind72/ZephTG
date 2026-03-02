@@ -1,0 +1,42 @@
+---
+app:
+  name: "ZephTG Random Image API"
+  version: "1.0.0"
+  description: "高性能随机图片API服务"
+api:
+  port: 8080
+  cors_enabled: true
+  allowed_origins:
+  - "*"
+  timeout: 30
+image:
+  storage_path: "./images"
+  categories:
+  - "anime"
+  - "landscape"
+  - "starry"
+  - "nature"
+  - "art"
+  supported_formats:
+  - ".jpg"
+  - ".jpeg"
+  - ".png"
+  - ".gif"
+  - ".webp"
+security:
+  admin_key: "5U31SU5ZpNp+Rtk0LX9Z84pfoALy90wC1EepAv/aKF8="
+  rate_limit_per_hour: 100
+  enable_ip_whitelist: false
+  ip_whitelist: []
+  log_access: true
+logging:
+  logLevel: "INFO"
+  log_path: "./logs"
+  level: "INFO"
+  console_output: true
+  max_file_size: 10
+  retention_days: 7
+monitor:
+  interval: 30
+  unit: "m"
+  enabled: true
